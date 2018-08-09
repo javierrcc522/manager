@@ -13,7 +13,7 @@ class LoginForm extends Component {
     this.props.passwordChanged(text);
   }
 
-  onButtonPress(){
+  onButtonPress = () => {
     const { email, password } = this.props;
 
     this.props.loginUser({ email, password });
@@ -37,7 +37,7 @@ class LoginForm extends Component {
     }
 
     return (
-      <Button onPress={this.onButtonPress.bind(this)}>
+      <Button onPress={this.onButtonPress}>
         Login
       </Button>
     );
