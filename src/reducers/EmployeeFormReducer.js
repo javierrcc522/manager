@@ -2,10 +2,17 @@ import {
   EMPLOYEE_UPDATE
 } from '../actions/types';
 
-const INITAL_STATE = {};
+const INITAL_STATE = {
+  name: '',
+  phone: '',
+  shift: ''
+};
 
 export default (state = INITIAL_STATE, actions) => {
   switch (action.type){
+    case EMPLOYEE_UPDATE:
+    // down below im doing key interpolation
+      return { ...state, [action.payload.prop]: action.payload.value };
     default:
       return state;
   }
