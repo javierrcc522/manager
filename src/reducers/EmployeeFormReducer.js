@@ -2,13 +2,13 @@ import {
   EMPLOYEE_UPDATE
 } from '../actions/types';
 
-const INITAL_STATE = {
+const INITIAL_STATE = {
   name: '',
   phone: '',
   shift: ''
 };
 
-export default (state = INITIAL_STATE, actions) => {
+export default (state = INITIAL_STATE, action) => {
   switch (action.type){
     case EMPLOYEE_UPDATE:
     // down below im doing key interpolation

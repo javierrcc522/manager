@@ -8,5 +8,5 @@ export const employeeUpdate = ({ prop, value }) => {
     payload: { prop, value }
 
 
-  };
+  }
 };
