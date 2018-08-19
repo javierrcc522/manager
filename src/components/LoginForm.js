@@ -17,7 +17,7 @@ class LoginForm extends Component {
     const { email, password } = this.props;
 
     this.props.loginUser({ email, password });
-  }
+  };
 
   renderError() {
     if (this.props.error) {
@@ -80,7 +80,7 @@ const styles = {
     alignSelf: 'center',
     color: 'red'
   }
-}
+};
 
 const mapStateToProps = ({ auth }) => {
   const { email, password, error, loading } = auth;
