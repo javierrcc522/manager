@@ -18,7 +18,7 @@ class EmployeeList extends Component {
     return (
       <FlatList
         data={this.props.employees}
-        renderItem={this.renderRow}
+        renderItem={this.renderRow.bind(this)}
         keyExtractor={employee => employee.uid}
         // renderItem={({ item }) => <Text>{item.name}</Text>} // Only for test
       />
